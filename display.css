@@ -1,0 +1,47 @@
+body {
+    background-color: #353535;
+}
+
+.form {
+    min-height: 34em;
+    background-color: #EAEFF1; 
+    margin-left: 30vw;
+    margin-right: 30vw;
+}
+
+.headerText {
+    text-align: center;
+}
+
+.table {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-size: 0.9em;
+
+    width: 100%;
+    
+    border: 1px solid rgb(165, 165, 165);
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+.table thead tr {
+    text-align: center;
+    background-color: #DDDDDD;
+    border: 1px solid rgb(165, 165, 165);
+}
+
+.table td {
+    text-align: center;
+    font-weight: bold;
+    padding-left: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: 1px solid rgb(165, 165, 165);
+}
+
+.headerThree {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    width: 10vw;
+}
