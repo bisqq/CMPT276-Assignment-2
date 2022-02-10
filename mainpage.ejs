@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle</title>
+    <link rel="stylesheet" href="./stylesheets/page.css">
+</head>
+<body>
+    <div>
+        <form class = "form">
+            <div>
+                <h1 class = "headerText">Rectangles</h1>
+            </div>
+            <div>
+                <table class = "table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Colour</th>
+                        </tr>
+                    </thead>
+                    <ul>
+                        <% results.forEach(function(r) { %>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <%= r.uid %>
+                                    </td>
+                                    <td>
+                                        <nav>
+                                            <a href = "/display">
+                                                <%= r.name %>
+                                            </a>
+                                        </nav>
+                                    </td>
+                                    <td>
+                                        <h3 class = "headerThree">
+                                            <%= r.colour %>
+                                        </h3>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        <% }); %>
+                    </ul>
+                </table>
+            </div>
+            <div>
+                <div>
+                    <input class = "TextField" type="text" name="name" placeholder="Enter Name">
+                </div>
+                <div>
+                    <input class = "TextField" type="number" oninput="validity.valid||(value='');" min="0" name="width" placeholder="Enter Width">
+                </div>
+                <div>
+                    <input class = "TextField" type="number" oninput="validity.valid||(value='');" min="0" name="height" placeholder="Enter Height">
+                </div>
+                <div>
+                    <input class = "TextField" type="text" name="colour" placeholder="Enter Colour">
+                </div>
+                <button class = "addRow" action = "/addrect">ADD</button>
+            </div>
+            <div>
+                <div>
+                    <input class = "TextField" type="number" oninput="validity.valid||(value='');" min="0" name="row" placeholder="Enter Row Number">
+                </div>
+                <button class = "deleteRow">DELETE</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script src = "MainPage.js"></script>
+</html>

@@ -45,3 +45,21 @@ body {
     margin-bottom: 0.5em;
     width: 10vw;
 }
+
+.TextField {
+    margin-left: 1em;
+}
+
+.editButton {
+    margin-bottom: 1em;
+    margin-left: 1em;
+
+    font-size: 0.9em;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background-color: #CC0633; 
+    border-radius: 5px;
+    padding: 5px;
+    border: 0;
+}
