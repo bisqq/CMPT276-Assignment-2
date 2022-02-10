@@ -34,7 +34,7 @@ app.get('/database', async (req, res) => {
 app.get('/display', async (req, res) => {
   try {
     console.log(req.body)
-    const result = await pool.query(`SELECT * FROM rect WHERE uid = '${req.body.id}'`)
+    const result = await pool.query(`SELECT * FROM rect`)
     const data = {results : result.rows}
     res.render('pages/displaypage', data)
 
