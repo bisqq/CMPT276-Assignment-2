@@ -3,7 +3,13 @@ body {
 }
 
 .form {
-    min-height: 34em;
+    min-height: 10em;
+    background-color: #EAEFF1; 
+    margin-left: 30vw;
+    margin-right: 30vw;
+}
+.form2 {
+    min-height: 5em;
     background-color: #EAEFF1; 
     margin-left: 30vw;
     margin-right: 30vw;

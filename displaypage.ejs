@@ -9,7 +9,7 @@
 </head>
 <body>
     <div>
-        <form class = "form">
+        <form class = "form" action = "/editRect" method='post'>
             <div>
                 <h1 class = "headerText">Rectangle Information</h1>
             </div>
@@ -17,6 +17,7 @@
                 <table class = "table">
                     <ul>
                         <% results.forEach(function(r) { %>
+                            <input name = uid type = 'hidden' value = '<%= r.uid %>'>
                             <tbody>
                                 <tr>
                                     <td>Name</td>
@@ -74,10 +75,33 @@
                 <div>
                     <input class = "TextField" type="text" name="colour" placeholder="Enter Colour">
                 </div>
-                <button class = "editButton">EDIT</button>
+                <button class = "editButton" type='submit'>EDIT</button>
+            </div>
+            <div>
+                <canvas class= "CanvasSize" id="myCanvas"></canvas>
+                <ul>
+                    <% results.forEach(function(r) { %>
+                        <script>
+                        var canvas = document.getElementById("myCanvas");
+                        var ctx = canvas.getContext("2d");
+
+                        canvas.width = '<%= r.width %>';
+                        canvas.height = '<%= r.height %>';
+
+                        ctx.beginPath();
+
+                        ctx.fillStyle = '<%= r.colour %>';
+                        ctx.fillRect(0, 0, '<%= r.width %>', '<%= r.height %>');
+
+                        ctx.fillStyle = 'black';
+                        ctx.font = '25px Courier';
+                        ctx.fillText(`<%= r.name %>`, 0, '<%= r.height %>' / 2);
+
+                        </script> 
+                    <% }); %>
+                </ul>
             </div>
         </form>
     </div>
 </body>
-<script src = "DisplayPage.js"></script>
 </html>

@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rectangle</title>
-    <link rel="stylesheet" href="./stylesheets/page.css">
+   <link rel="stylesheet" href="./stylesheets/page.css">
 </head>
 <body>
     <div>
-        <form class = "form">
+        <form class = "form" action = "/addRect" method='post'>
             <div>
                 <h1 class = "headerText">Rectangles</h1>
             </div>
@@ -17,7 +17,7 @@
                 <table class = "table">
                     <thead>
                         <tr>
-                            <th></th>
+                            <th>ID</th>
                             <th>Name</th>
                             <th>Colour</th>
                         </tr>
@@ -31,7 +31,7 @@
                                     </td>
                                     <td>
                                         <nav>
-                                            <a href = "/display">
+                                            <a href = '/<%= r.uid %>'>
                                                 <%= r.name %>
                                             </a>
                                         </nav>
@@ -60,16 +60,17 @@
                 <div>
                     <input class = "TextField" type="text" name="colour" placeholder="Enter Colour">
                 </div>
-                <button class = "addRow" action = "/addrect">ADD</button>
+                <button class = "addRow" type='submit'>ADD</button>
             </div>
+        </form>
+        <form class = "form2" action = "/deleteRect" method='post'>
             <div>
                 <div>
-                    <input class = "TextField" type="number" oninput="validity.valid||(value='');" min="0" name="row" placeholder="Enter Row Number">
+                    <input class = "TextField" type="number" oninput="validity.valid||(value='');" min="0" name="rowId" placeholder="Enter ID Number">
                 </div>
-                <button class = "deleteRow">DELETE</button>
+                <button class = "deleteRow" type='submit'>DELETE</button>
             </div>
         </form>
     </div>
 </body>
-<script src = "MainPage.js"></script>
 </html>
