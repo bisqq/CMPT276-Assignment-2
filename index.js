@@ -118,15 +118,6 @@ app.post('/editRect', async (req, res) => {
       console.log(colour)
       await pool.query(`UPDATE rect SET colour='${colour}' WHERE uid='${rowId}'`)
     }
-  
-    // try {
-    //   const result = await pool.query(`SELECT * FROM rect WHERE uid='${rowId}'`)
-    //   const data = {results : result.rows}
-    //   res.render('pages/displaypage', data)
-  
-    // } catch (err) {
-    //   res.send(err)
-    // }
 
     res.redirect('/database')
     
