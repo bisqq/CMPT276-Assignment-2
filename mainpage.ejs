@@ -47,26 +47,22 @@
                     </ul>
                 </table>
             </div>
-            <div>
+            <div class = "container">
                 <div>
                     <input class = "TextField" type="text" name="name" placeholder="Enter Name">
-                </div>
-                <div>
                     <input class = "TextField" type="number" oninput="validity.valid||(value='');" min="0" name="width" placeholder="Enter Width">
                 </div>
                 <div>
-                    <input class = "TextField" type="number" oninput="validity.valid||(value='');" min="0" name="height" placeholder="Enter Height">
-                </div>
-                <div>
                     <input class = "TextField" type="text" name="colour" placeholder="Enter Colour">
+                    <input class = "TextField" type="number" oninput="validity.valid||(value='');" min="0" name="height" placeholder="Enter Height">
                 </div>
                 <button class = "addRow" type='submit'>ADD</button>
             </div>
         </form>
-        <form class = "form2" action = "/deleteRect" method='post'>
-            <div>
+        <form class = "formTwo" action = "/deleteRect" method='post'>
+            <div class = "containerTwo">
                 <div>
-                    <input class = "TextField" type="number" oninput="validity.valid||(value='');" min="0" name="rowId" placeholder="Enter ID Number">
+                    <input class = "TextFieldDelete" type="number" oninput="validity.valid||(value='');" min="0" name="rowId" placeholder="Enter ID Number">
                 </div>
                 <button class = "deleteRow" type='submit'>DELETE</button>
             </div>

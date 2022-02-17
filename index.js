@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express')
 const { redirect } = require('express/lib/response')
 const res = require('express/lib/response')
@@ -7,7 +8,10 @@ const PORT = process.env.PORT || 5000
 const { Pool } = require('pg')
 var pool
 pool = new Pool({
-  connectionString: process.env.DATABASE_URL || "postgres://postgres:root@localhost/rectangle"
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false,
+  },
 })
 
 var app = express()

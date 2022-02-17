@@ -1,32 +1,29 @@
 body {
-    background-color: #353535;
+    background: linear-gradient(45deg, #49a09d, #5f2c82);
 }
 
 .form {
     min-height: 10em;
-    background-color: #EAEFF1; 
-    margin-left: 30vw;
-    margin-right: 30vw;
 }
-.form2 {
+.formTwo {
     min-height: 5em;
-    background-color: #EAEFF1; 
-    margin-left: 30vw;
-    margin-right: 30vw;
 }
 
 .headerText {
     text-align: center;
+    color: whitesmoke;
+    font-family: Arial;
 }
 
 .table {
     margin-top: 2em;
     margin-bottom: 2em;
-    font-size: 0.9em;
-
+    font-size: 1em;
+    color: whitesmoke;
     width: 100%;
+
+    border-radius: 8px;
     
-    border: 1px solid rgb(165, 165, 165);
     border-collapse: collapse;
     overflow: hidden;
 }
@@ -34,45 +31,75 @@ body {
 .table th, .table td {
     text-align: center;
     font-weight: bold;
-    padding-left: 8px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    border: 1px solid rgb(165, 165, 165);
+    font-family: Arial;
+    width:30%; 
+    padding: 0.8em;
+    border-bottom: 1px solid whitesmoke;
+    background-color: rgba(255,255,255,0.2);
 }
 
-.addRow {
+.addRow, .deleteRow {
     margin-bottom: 1em;
-    margin-left: 1em;
+    margin-top: 0.5em;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
 
-    font-size: 0.9em;
+    font-size: 1em;
     font-weight: bold;
     color: white;
     text-align: center;
     background-color: #CC0633; 
-    border-radius: 5px;
-    padding: 5px;
+    border-radius: 20px;
+    padding: 10px 3em;
     border: 0;
 }
 
 .deleteRow {
-    margin-bottom: 1em;
-    margin-left: 1em;
-
-    font-size: 0.9em;
-    font-weight: bold;
-    color: white;
-    text-align: center;
     background-color: #CC0633; 
-    border-radius: 5px;
-    padding: 5px;
-    border: 0;
+}
+
+.TextField, .TextFieldDelete {
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
 }
 
 .TextField {
-    margin-left: 1em;
+    width: 30%;
+    margin-left: 5vw;
+    margin-top: 1em;
+}
+
+.TextFieldDelete {
+    margin-top: 1em;
+    width: 50%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 
 .headerThree {
     margin-top: 0em;
     margin-bottom: 0em;
+}
+
+.container, .containerTwo {
+    background-color: white;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.container {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.containerTwo {
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
